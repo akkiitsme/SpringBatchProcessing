@@ -1,0 +1,27 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: SPRING-BATCH
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: ALWAYS
+
+#Student CSV Path
+student:
+  record:
+    path: classpath:student.csv
+
+
+
